@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  absolutewebservice:
+    image: 
+    environment:
+      - 
+    ports:
+      - 80:8080
+    volumes:
+      - 
+    restart: always
+    command: bash -c ""
