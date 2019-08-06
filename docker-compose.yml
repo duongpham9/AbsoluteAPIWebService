@@ -2,12 +2,25 @@ version: '3'
 
 services:
   absolutewebservice:
-    image: 
-    environment:
-      - 
+    build: .
     ports:
       - 80:8080
     volumes:
-      - 
-    restart: always
-    command: bash -c ""
+      - /absolutewebservice/conf/conf.properties:app/conf/conf.properties
+    depends_on:
+      - postgres
+    links:
+      - postgres
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=myproject
+      - POSTGRES_HOST=postgres  
+  postgres:
+    image: postgres:9.6
+    environment:
+      - POSTGRES_USER=user
+      - POSTGRES_PASSWORD=password
+      - POSTGRES_DB=myproject
+    volumes:
+      - /absolutewebservice/postgres:/var/lib/postgresql/data

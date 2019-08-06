@@ -13,10 +13,12 @@ TODO: Guide users through getting your code up and running on their own system. 
 - src
 - docker-compose file
 - Setup environment
+2. Setup environment:
 
-2. Build
+3. Build and deploy:
+Because the framework for dev team run on the local environment so i will use integrate build docker image on docker-compose file
 
-3. Deploy
+4. Maintanance:
 
 
 
