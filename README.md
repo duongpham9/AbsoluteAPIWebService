@@ -8,6 +8,11 @@ TODO: Give a framework to setup the local environment and deploy our application
 
 Getting Started
 TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
+*****Preconditions*****
+- OS: Ubuntu 18.04.2 LTS
+- Install latest stable of Ansible 
+apt-get update && apt-get install ansible
+
 1. Source code structure:
 - Dockerfile
 - src
