@@ -7,6 +7,8 @@ services:
       - 80:8080
     volumes:
       - /absolutewebservice/conf/conf.properties:app/conf/conf.properties
+    networks: 
+      - webapp
     depends_on:
       - postgres
     links:
@@ -24,3 +26,11 @@ services:
       - POSTGRES_DB=myproject
     volumes:
       - /absolutewebservice/postgres:/var/lib/postgresql/data
+    networks:
+      - webapp
+networks:
+  webapp:
+    driver: bridge
+    ipam:
+     config:
+       - subnet: 172.16.11.0/24

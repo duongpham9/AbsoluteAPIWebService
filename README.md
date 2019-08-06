@@ -16,7 +16,9 @@ TODO: Guide users through getting your code up and running on their own system. 
 2. Setup environment:
 
 3. Build and deploy:
-Because the framework for dev team run on the local environment so i will use integrate build docker image on docker-compose file
+Because the framework for dev team run on the local environment so i will use integrate build and deploy via docker image on docker-compose file with command below:
+
+docker-compose -f docker-compose.yml up -d
 
 4. Maintanance:
 
